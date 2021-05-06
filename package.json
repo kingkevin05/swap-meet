@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/kingkevin05/swap-meet#readme",
   "dependencies": {
-    "express-handlebars": "^5.3.1",
+    "dotenv": "^9.0.0",
     "express": "^4.17.1",
+    "express-handlebars": "^5.3.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
   },
