@@ -1,0 +1,187 @@
+!<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Swap Meet</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="./public/stylesheets/style.css">
+    </head>
+    <body>
+       <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">SWAP MEET</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-light"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">HOME
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ABOUT">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ELECTRONICS">ELECTRONICS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#MISCELLANEOUS">MISCELLANEOUS</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        </header>
+        <main>
+        <section class="section-4" id="ITEMS">
+            <div class="container text-center">
+                <h1 class="text-dark">Browse Items</h1>
+                <p class="text-secondary">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!--
+                ####################################################
+                C A R O U S E L
+                ####################################################
+                -->
+            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <a href="#">
+                            <!-- 
+                                If you need more browser support use https://scottjehl.github.io/picturefill/
+                                If a picture looks blurry on a retina device you can add a high resolution like this
+                                <source srcset="img/blog-post-1000x600-2.jpg, blog-post-1000x600-2@2x.jpg 2x" media="(min-width: 768px)">
+            
+                                What image sizes should you use? This can help - https://codepen.io/JacobLett/pen/NjramL
+                                 -->
+                            <picture>
+                                <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
+                                <source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
+                                <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                                <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image"
+                                    class="d-block img-fluid">
+                            </picture>
+            
+                            <div class="carousel-caption">
+                                <div>
+                                    <h2>Filler Title1</h2>
+                                    <p>Filler Description1</p>
+                                    <span class="btn btn-sm btn-outline-secondary">Learn More</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- /.carousel-item -->
+                    <div class="carousel-item">
+                        <a href="#">
+                            <picture>
+                                <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
+                                <source srcset="https://dummyimage.com/1400x500/007aeb/4196e5" media="(min-width: 769px)">
+                                <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                                <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image"
+                                    class="d-block img-fluid">
+                            </picture>
+            
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <div>
+                                    <h2>Filler Title2</h2>
+                                    <p>Filler Description2</p>
+                                    <span class="btn btn-sm btn-outline-secondary">Our Process</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- /.carousel-item -->
+                    <div class="carousel-item">
+                        <a href="#/">
+                            <picture>
+                                <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
+                                <source srcset="https://dummyimage.com/1400x500/007aeb/4196e5" media="(min-width: 769px)">
+                                <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                                <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image"
+                                    class="d-block img-fluid">
+                            </picture>
+            
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <div>
+                                    <h2>Filler Title3</h2>
+                                    <p>Filler Description3</p>
+                                    <span class="btn btn-sm btn-secondary">Learn How</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- /.carousel-item -->
+                </div>
+                <!-- /.carousel-inner -->
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- /.carousel -->
+            
+            
+            <div class="container-fluid text-center">
+                <p>Full width carousel with a maximum height and art direction. Resize window to see image change based on the size
+                    of the window.</p>
+            </div>
+            <!-- /.container -->
+            </main>
+            <footer>
+                <div class="container-fluid p-0">
+                    <div class="row text-left">
+                        <div class="col-md-5 col-sm-5">
+                            <h4 class="text-muted">Thanks for visiting!</h4>
+                            <p class="pt-4 text-muted">Copyright ©2021 | All rights reserved
+                            </p>
+                        </div>
+                        <div class="col-md-5 col-sm-12">
+                            <h4 class="text-light">Newsletter</h4>
+                            <p class="text-muted">Subscribe and Stay Updated!</p>
+                            <form class="form-inline">
+                                <div class="col pl-0">
+                                    <div class="input-group pr-5">
+                                        <input type="text" class="form-control bg-dark text-white"
+                                            id="emailInput" placeholder="Enter your email">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="fas fa-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+    </body>
+</html>
