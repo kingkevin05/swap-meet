@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --greengradient: linear-gradient(45deg, #C1F6ED, #02353C, #449342, #2EAF7D, #3FD0C9);
+    --hologradient: linear-gradient(to right, #3A416F, #5D83C0, #10A3A2, #B0B3B1, #111311);
+}
+
+body {
+    background: rgba(46, 46, 46, 0.384);
+}
+
+header {
+    overflow-x: hidden;
+    background: var(--greengradient);
+}
+
+header a {
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: whitesmoke;
+}
+
+/* NAVBAR START */
+.navbar-toggler {
+    margin-top: -2.4em;
+    margin-left: -1em;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+header .nav-item:last-child {
+    padding-right: 3em;
+}
+
+header .nav-item {
+    padding: 0.9em;
+}
+
+header .navbar-brand {
+    padding-left: 3em;
+    padding-top: 0.6em;
+    padding-right: 1em;
+}
+
+header .nav-link:hover {
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9999;
+    transition: all 1.5s ease;
+}
+
+/* NAVBAR END */
+
+/* CAROUSEL START */
+.section-4 .container h1 {
+    font-size: 6vmin;
+    padding-top: 14vmin;
+}
+
+/*
+Removes white gap between slides - change to base color of slide images
+*/
+.carousel {
+    background: #007aeb;
+}
+
+/*
+Forces image to be 100% width and not max width of 100%
+*/
+.carousel-item .img-fluid {
+    width: 100%;
+}
+
+/* 
+anchors are inline so you need to make them block to go full width
+*/
+.carousel-item a {
+    display: block;
+    width: 100%;
+}
+
+/* CAROUSEL END */
+
+footer {
+    background: rgba(0, 0, 0, 0.815);
+    overflow-x: hidden;
+    padding: 14vmin 18vmin;
+}
+
+footer p>span {
+    color: #ff512f;
+}
+
+footer input {
+    border: none !important;
+}
+
+footer input::placeholder {
+    color: white !important;
+}
+
+footer .input-group .input-group-text {
+    background: var(--bggradient);
+    border: none;
+}
+
+footer .column i {
+    color: #dd2476;
+}
+
+/* It is Adjacent sibling combinator */
+
+footer .column i+i {
+    padding: 0 0.5em;
+}

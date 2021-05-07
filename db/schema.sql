@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS swapmeet_db;
-CREATE DATABASE swapmeet_db;
+DROP DATABASE IF EXISTS swap_meet_db;
+
+CREATE DATABASE swap_meet_db;
 
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS item;
