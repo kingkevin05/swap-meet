@@ -8,7 +8,7 @@ class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
-}
+};
 
 // create fields/columns for User model
 User.init(
@@ -18,6 +18,14 @@ User.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
+    },
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     username: {
       type: DataTypes.STRING,
@@ -37,6 +45,14 @@ User.init(
       validate: {
         len: [4]
       }
+    },
+    phoneNumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {

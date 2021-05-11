@@ -1,31 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Item model
-// class Item extends Model {
-//   static upvote(body, models) {
-//     return models.Vote.create({ 
-//       user_id: body.user_id,
-//       post_id: body.post_id
-//     }).then(() => {
-//       return Item.findOne({
-//         where: {
-//           id: body.post_id
-//         },
-//         attributes: [
-//           'id',
-//           'post_url',
-//           'title',
-//           'created_at',
-//           [
-//             sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
-//             'vote_count'
-//           ]
-//         ]
-//       });
-//     });
-//   }
-// }
+class Item extends Model {};
 
 // create fields/columns for Item model
 Item.init(
@@ -40,18 +16,11 @@ Item.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_url: {
+    image_url: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isURL: true
-      }
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
       }
     }
   },
@@ -59,7 +28,7 @@ Item.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post'
+    modelName: 'item'
   }
 );
 
