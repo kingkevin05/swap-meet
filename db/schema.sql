@@ -1,6 +1,5 @@
 DROP DATABASE IF EXISTS swap_meet_db;
 
-<<<<<<< HEAD
 CREATE DATABASE swap_meet_db;
 
 DROP TABLE IF EXISTS categories;
@@ -35,6 +34,3 @@ CREATE TABLE users(
     FOREIGN KEY (id) REFERENCES item(id),
     -- FOREIGN KEY (id) REFERENCES categories(id)
 );
-=======
-CREATE DATABASE swap_meet_db;
->>>>>>> d0b54682f45f2731cb6780f8ce7231a7636d4336

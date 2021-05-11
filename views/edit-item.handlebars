@@ -1,0 +1,23 @@
+<article>
+  <a href="/your-stuff"> &larr; Back to Your Stuff</a>
+  <h2>
+    Edit Item
+  </h2>
+  <form class="edit-item-form">
+    <div>
+      <input name="item-title" type="text" value="{{item.title}}" />
+      <textarea name="description" value="{{item.description}}"></textarea>
+      
+    </div>
+    
+    <button type="submit">Save item</button>
+    <button type="button" class="delete-item-btn">Delete item</button>
+  </form>
+</article>
+
+
+{{> comments item.comments}}
+
+<script src="/javascript/edit-item.js"></script>
+<script src="/javascript/delete-item.js"></script>
+<script src="/javascript/comment.js"></script>

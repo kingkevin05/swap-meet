@@ -1,0 +1,25 @@
+<section>
+  <h2>Create a New Trade</h2>
+
+  <form class="new-item-form">
+    <div>
+      <label for="item-title">Title</label>
+      <input type="text" id="item-title" name="item-title" />
+    </div>
+
+     <div>
+      <label for="item-description">Description</label>
+      {{!-- <input type="text" id="description" name="description" /> --}}
+      <textarea name="description" id="description"></textarea>
+    </div>
+
+    <div>
+      <label for="file" style="cursor: pointer;">Upload Image</label>
+      <input type="file" accept="image/*" name="item-img" id="item-img" onchange="loadFile(event)" style="display: none;">
+      <img id="output" width="200" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+<script src="/javascript/add-item.js"></script>
