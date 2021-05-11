@@ -10,11 +10,11 @@ Item.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     image_url: {
       type: DataTypes.STRING,
@@ -22,7 +22,11 @@ Item.init(
       validate: {
         isURL: true
       }
-    }
+    },
+    item_description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
