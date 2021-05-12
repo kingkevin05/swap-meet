@@ -23,6 +23,11 @@ header a {
     color: whitesmoke;
 }
 
+.modalBtn {
+    padding: auto;
+    margin-right: -20em;
+}
+
 /* NAVBAR START */
 .navbar-toggler {
     margin-top: -2.4em;
@@ -41,7 +46,7 @@ header .nav-item:last-child {
 }
 
 header .nav-item {
-    padding: 1em;
+    padding: 2.5em;
 }
 
 header .navbar-brand {
