@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Item, Categories } = require('../../models');
 
+// Get categories
 router.get('/categories', (req, res) => {
     Categories.findAll({})
     .then((categoriesData) => {

@@ -45,6 +45,7 @@ router.get('/:id', (req, res) => {
       });
 });
 
+// Post new item
 router.post('/', (req, res) => {
     Item.create({
       title: req.body.title,
@@ -52,6 +53,26 @@ router.post('/', (req, res) => {
       user_id: req.body.user_id
     })
       .then(dbItemData => res.json(dbItemData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+});
+
+// DELETE item
+router.delete('/:id', (req, res) => {
+  User.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(dbItemData => {
+        if (!dbItemData) {
+          res.status(404).json({ message: 'No item found with this id' });
+          return;
+        }
+        res.json(dbItemData);
+      })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
