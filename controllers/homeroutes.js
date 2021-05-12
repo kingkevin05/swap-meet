@@ -5,4 +5,13 @@ router.get('/', (req, res) => {
     res.render('homepage')
 })
 
-module.exports = router;
+router.get('/login', (req, res) => {
+  res.render('login')
+})
+
+router.get('/your-stuff', (req, res) => {
+  res.render('your-stuff')
+})
+
+
+module.exports = router
