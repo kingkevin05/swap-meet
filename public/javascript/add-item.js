@@ -2,20 +2,16 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('input[name="item-title"]').value;
-  const image_url = document.querySelector('input[name="image-url"]').value;
+  // const image_url = document.querySelector('input[name="image-url"]').value;
   const item_description = document.querySelector('input[name="description"]').value;
 
-  const loadFile = function(event) {
-    let image = document.getElementById('output');
-    image.src = URL.createObjectURL(event.target.files[0]);
-  };
 
   const response = await fetch(`/api/items`, {
     method: 'POST',
     body: JSON.stringify({
       title,
       item_description,
-      image_url
+      // image_url
     }),
     headers: {
       'Content-Type': 'application/json'
