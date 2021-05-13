@@ -8,9 +8,9 @@
     </div>
 
     <div>
-      <label for="item-description">Description</label>
+      <label for="description">Description</label>
       <input type="text" id="description" name="description" />
-      {{!-- <textarea name="description" id="description"></textarea> --}}
+      {{! <textarea name="description" id="description"></textarea> }}
     </div>
 
     <div>
@@ -29,10 +29,24 @@
   </form>
 </section>
 
-<script>
+{{!-- {{#if items.length}}
+<section>
+  <h2>Your Stuff</h2>
+  <ol>
+    {{#each items as |item|}}
+    <li>
+      {{> item-info item}}
+      <a href="/your-stuff/edit/{{item.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}} --}}
+
+{{!-- <script>
   var loadFile = function(event) { var image =
   document.getElementById('output'); image.src =
   URL.createObjectURL(event.target.files[0]); };
-</script>
+</script> --}}
 
 <script src="/javascript/add-item.js"></script>

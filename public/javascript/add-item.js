@@ -2,27 +2,35 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('input[name="item-title"]').value;
-  // const image_url = document.querySelector('input[name="image-url"]').value;
-  const item_description = document.querySelector('input[name="description"]').value;
-
+  const item_description = document.querySelector(
+    'input[name="description"]'
+  ).value;
+  const image_url = (loadFile).value;
 
   const response = await fetch(`/api/items`, {
-    method: 'POST',
+    method: "POST",
     body: JSON.stringify({
       title,
       item_description,
-      // image_url
+      image_url,
     }),
     headers: {
-      'Content-Type': 'application/json'
-    }
+      "Content-Type": "application/json",
+    },
   });
 
   if (response.ok) {
-    document.location.replace('/your-stuff');
+    document.location.replace("/your-stuff");
   } else {
     alert(response.statusText);
   }
 }
 
-document.querySelector('.new-item-form').addEventListener('submit', newFormHandler);
+document
+  .querySelector(".new-item-form")
+  .addEventListener("submit", newFormHandler);
+
+var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};

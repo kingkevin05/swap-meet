@@ -1,36 +1,34 @@
 const express = require('express');
-const routes = require('./controllers');
+const routes = require('./controllers/');
 const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
 const path = require('path');
-// const session = require('express-session');
-// const SequelizeStore = require ("connect-session-sequelize")(session.Store)
+const session = require('express-session');
+const SequelizeStore = require ("connect-session-sequelize")(session.Store)
 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const s = {
-//   secret:"abc", 
-//   cookie:{},
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore(
-//     {db: sequelize}
-//   )
-// }
+const sess = {
+  secret:"abc", 
+  cookie:{},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore(
+    {db: sequelize}
+  )
+};
+
+app.use(session(sess));
+
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname,'public')))
 
-const hbs = exphbs.create({
-  helpers: {
-    format_date: date => {
-      return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-    }
-  }
-});
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
