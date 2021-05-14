@@ -1,0 +1,32 @@
+.col {
+    padding: 1em;
+}
+
+textarea {
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-control {
+    width: 40em;
+    height: 25em;
+}
+
+.btn-primary {
+    width: 10em;
+    height: 2em;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.col-4 {
+    padding: 1em;
+}
+
+.card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}

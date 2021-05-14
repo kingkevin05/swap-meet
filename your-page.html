@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Swap Meet</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="./public/stylesheets/style.css">
+        <link rel="stylesheet" href="./public/stylesheets/secondary-style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container-fluid p-0">
+                <div class="row text-center">
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="page-title">Swap Meet</h2>
+                    </div>
+                    <div class="col-md-4">
+                            <a href="./login.html" type="button" class="btn btn-outline-primary">Sign up/Login</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="./index.html"><i class="fas fa-home"></i></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars text-light"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <div class="mr-auto"></div>
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">HOME
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#ABOUT">ABOUT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#CLOTHING">CLOTHING</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#ELECTRONICS">ELECTRONICS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#ENTERTAINMENT">ENTERTAINMENT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#SPORTING">SPORTING GOODS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col text-center">
+                        <section>
+                            <h2 class="section-title">Create a New Trade</h2>
+
+                            <form class="new-item-form">
+                                <div>
+                                <label for="item-title">Title</label>
+                                <input type="text" id="item-title" name="item-title" />
+                                </div>
+
+                                <div>
+                                <label for="item-description">Description</label>
+                                <input type="text" class="description" id="description" name="description" />
+                                {{!-- <textarea name="description" id="description"></textarea> --}}
+                                </div>
+                                <div class="form-floating">
+                                    <label for="floatingTextarea2">Description</label>
+                                    <textarea class="form-control" name="description" placeholder="Enter a description..." id="description"></textarea>
+                                </div>
+
+                                <div>
+                                <p><input
+                                    type="file"
+                                    accept="image/*"
+                                    name="image"
+                                    id="file"
+                                    onchange="loadFile(event)"
+                                    style="display: none;"
+                                    /></p>
+                                <p><label class="button btn-primary" for="file" style="cursor: pointer;">Upload Image</label></p>
+                                <p><img id="output" width="200" /></p>
+                                </div>
+                                <label type="submit" class="button btn-primary">Create</label>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- Your List of Stuff -->
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="section-title">Your Stuff</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="item-image">
+                            <div class="card-body">
+                                <h5 class="card-title">Item title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="item-image">
+                            <div class="card-body">
+                                <h5 class="card-title">Item title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="item-image">
+                            <div class="card-body">
+                                <h5 class="card-title">Item title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container-fluid p-0">
+                <div class="row text-left">
+                    <div class="col-md-5 col-sm-5">
+                        <h4 class="text-muted">Thanks for visiting!</h4>
+                        <p class="pt-4 text-muted">Copyright ©2021 | All rights reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

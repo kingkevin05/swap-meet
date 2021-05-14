@@ -7,19 +7,46 @@
       <input type="text" id="item-title" name="item-title" />
     </div>
 
-     <div>
-      <label for="item-description">Description</label>
-      {{!-- <input type="text" id="description" name="description" /> --}}
-      <textarea name="description" id="description"></textarea>
+    <div>
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" />
+      {{! <textarea name="description" id="description"></textarea> }}
     </div>
 
     <div>
-      <label for="file" style="cursor: pointer;">Upload Image</label>
-      <input type="file" accept="image/*" name="image" id="image-url" onchange="loadFile(event)" style="display: none;">
-      <img id="output" width="200" />
+      <p><input
+          type="file"
+          accept="image/*"
+          name="image"
+          id="file"
+          onchange="loadFile(event)"
+          style="display: none;"
+        /></p>
+      <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+      <p><img id="output" width="200" /></p>
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
+
+{{!-- {{#if items.length}}
+<section>
+  <h2>Your Stuff</h2>
+  <ol>
+    {{#each items as |item|}}
+    <li>
+      {{> item-info item}}
+      <a href="/your-stuff/edit/{{item.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}} --}}
+
+{{!-- <script>
+  var loadFile = function(event) { var image =
+  document.getElementById('output'); image.src =
+  URL.createObjectURL(event.target.files[0]); };
+</script> --}}
 
 <script src="/javascript/add-item.js"></script>

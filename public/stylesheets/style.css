@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 :root {
+    --orbitron:'Orbitron', sans-serif;
+    --roboto: 'Roboto', sans-serif;
     --greengradient: linear-gradient(45deg, #C1F6ED, #02353C, #449342, #2EAF7D, #3FD0C9);
     --hologradient: linear-gradient(to right, #3A416F, #5D83C0, #10A3A2, #B0B3B1, #111311);
 }
@@ -23,15 +27,17 @@ header a {
     color: whitesmoke;
 }
 
-.modalBtn {
-    padding: auto;
-    margin-right: -20em;
+.page-title {
+    font-family: var(--orbitron);
+}
+
+.section-title {
+    font-family: var(--roboto);
 }
 
 /* NAVBAR START */
 .navbar-toggler {
-    margin-top: -2.4em;
-    margin-left: -1em;
+    margin-left: 35em;
 }
 
 .navbar-toggler:focus,
@@ -101,7 +107,7 @@ anchors are inline so you need to make them block to go full width
 footer {
     background: rgba(0, 0, 0, 0.815);
     overflow-x: hidden;
-    padding: 14vmin 18vmin;
+    padding: 5vmin 10vmin;
 }
 
 footer p>span {
