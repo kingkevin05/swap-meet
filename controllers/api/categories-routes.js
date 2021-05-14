@@ -13,3 +13,5 @@ router.get('/categories', (req, res) => {
         console.log(err);
     })
 });
+
+module.exports = router;
