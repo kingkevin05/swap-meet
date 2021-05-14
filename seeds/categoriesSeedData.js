@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
 const { Categories } = require('../models');
 
-const categoriedData = [
+const categoriesData = [
     {
         id: "1",
         title: "electronics"
@@ -12,6 +12,6 @@ const categoriedData = [
     }
 ];
 
-const categoriesSeedData = () => Categories.bulkCreate(categorieData, {individualHooks: true});
+const categoriesSeedData = () => Categories.bulkCreate(categoriesData, {individualHooks: true});
 
 module.exports = categoriesSeedData;

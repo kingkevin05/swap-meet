@@ -50,17 +50,30 @@ router.post("/login", (req, res) => {
         res.status(400).json({ message: "invalid password" });
         return;
       }
-      res.json({ user: dbUserData, message: "Login successful" });
-      // req.session.save(function (err) {
-      //   req.session.email = dbUserData.email;
-      //   req.session.loggedIn = true;
-      //   res.json({ user: dbUserData, message: "Login successful" });
-      // });
+      // res.json({ user: dbUserData, message: "Login successful" });
+      req.session.save(function (err) {
+        req.session.user_id = dbUserData.id;
+        req.session.email = dbUserData.email;
+        req.session.loggedIn = true;
+
+        res.json({ user: dbUserData, message: "Login successful" });
+      });
     })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
 });
 
 // POST /api/users
