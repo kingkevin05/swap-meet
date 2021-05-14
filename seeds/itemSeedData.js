@@ -10,6 +10,6 @@ const itemData = [
     }
 ];
 
-const itemSeedData = () => item.bulkCreate(itemData, {individualHooks: true});
+const itemSeedData = () => Item.bulkCreate(itemData, {individualHooks: true});
 
 module.exports = itemSeedData;
