@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -14,139 +14,147 @@
     <body>
        <header>
         <div class="container-fluid p-0">
-            <div class="row">
-                <div class="col text-center">
-                    <h2>Swap Meet</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <h2 class="page-title">Swap Meet</h2>
+                </div>
+                <div class="col-md-4">
                 </div>
             </div>
+        </div>
         </header>
         <main>
-            <div class="row">
-                <div class="col">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h3 class="card-title">
-                                    Sign Up
-                                </h3>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Email</span>
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        Sign Up
+                                    </h3>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Email</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="email-signup" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
                                     </div>
-                                    <input type="text" class="form-control" id="email-signup" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Username</span>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Username</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="username-signup" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
-                                    <input type="text" class="form-control" id="username-signup" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Password</span>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Password</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="password-signup" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                                     </div>
-                                    <input type="text" class="form-control" id="password-signup" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Full Name</span>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Full Name</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="fullname-signup" placeholder="Full Name(e.g. John Smith)" aria-label="Full Name" aria-describedby="basic-addon1">
                                     </div>
-                                    <input type="text" class="form-control" id="fullname-signup" placeholder="Full Name(e.g. John Smith)" aria-label="Full Name" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Address</span>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Address</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="address-signup" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
                                     </div>
-                                    <input type="text" class="form-control" id="address-signup" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Phone Number</span>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Phone Number</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="phone-signup" placeholder="Phone Number" aria-label="Address" aria-describedby="basic-addon1">
                                     </div>
-                                    <input type="text" class="form-control" id="phone-signup" placeholder="Phone Number" aria-label="Address" aria-describedby="basic-addon1">
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-4">
-                                    <select name="month" id="birthMonth">
-                                        <option value="month">Month</option>
-                                        <option value="january">January</option>
-                                        <option value="february">February</option>
-                                        <option value="march">March</option>
-                                        <option value="april">April</option>
-                                        <option value="may">May</option>
-                                        <option value="june">June</option>
-                                        <option value="july">July</option>
-                                        <option value="august">August</option>
-                                        <option value="september">September</option>
-                                        <option value="october">October</option>
-                                        <option value="november">November</option>
-                                        <option value="december">December</option>
-                                    </select>
-                                    </div>
-                                    <div class="col-4">
-                                        <select name="day" id="birthDay">
-                                            <option value="date">Day</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
+                                    
+                                    <div class="row">
+                                        <div class="col-4">
+                                        <select name="month" id="birthMonth">
+                                            <option value="month">Month</option>
+                                            <option value="january">January</option>
+                                            <option value="february">February</option>
+                                            <option value="march">March</option>
+                                            <option value="april">April</option>
+                                            <option value="may">May</option>
+                                            <option value="june">June</option>
+                                            <option value="july">July</option>
+                                            <option value="august">August</option>
+                                            <option value="september">September</option>
+                                            <option value="october">October</option>
+                                            <option value="november">November</option>
+                                            <option value="december">December</option>
                                         </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <select name="day" id="birthDay">
+                                                <option value="date">Day</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <select name="year" id="birthYear">
+                                                <option value="year">Year</option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col-4">
-                                        <select name="year" id="birthYear">
-                                            <option value="year">Year</option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                        </select>
+                                    <div class="card-footer">
+                                        <a href="#" type="button" class="btn btn-primary">Sign Up</a>
+                                        <p>Already registered? Login <a href="#">here</a>.</p>
                                     </div>
                                 </div>
-                                <div class="card-footer">
-                                    <a href="#" type="button" class="btn btn-primary">Sign Up</a>
-                                    <p>Already registered? Login <a href="#">here</a>.</p>
-                                </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

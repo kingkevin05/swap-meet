@@ -35,6 +35,11 @@ header a {
     font-family: var(--roboto);
 }
 
+.page-title {
+    padding-top: .8em;
+    padding-bottom: 0.8em;
+}
+
 /* NAVBAR START */
 .navbar-toggler {
     margin-left: 35em;
