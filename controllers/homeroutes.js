@@ -24,4 +24,4 @@ router.get('/item-imfo', (req, res) => {
   res.render('item-imfo')
 });
 
-module.exports = router
+module.exports = router;
