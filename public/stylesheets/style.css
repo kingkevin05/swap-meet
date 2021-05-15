@@ -27,15 +27,17 @@ header a {
     color: whitesmoke;
 }
 
-.page-title {
-    font-family: var(--orbitron);
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    border: none;
+    text-decoration: none;
 }
 
+.page-title,
 .section-title {
-    font-family: var(--roboto);
-}
-
-.page-title {
+    font-family: var(--orbitron);
     padding-top: .8em;
     padding-bottom: 0.8em;
 }
@@ -80,10 +82,6 @@ header .nav-link:hover {
 /* NAVBAR END */
 
 /* CAROUSEL START */
-.section-4 .container h1 {
-    font-size: 6vmin;
-    padding-top: 14vmin;
-}
 
 /*
 Removes white gap between slides - change to base color of slide images
@@ -92,6 +90,11 @@ Removes white gap between slides - change to base color of slide images
     background: #007aeb;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: black;
+    width: 1em;
+}
 /*
 Forces image to be 100% width and not max width of 100%
 */
@@ -99,12 +102,18 @@ Forces image to be 100% width and not max width of 100%
     width: 100%;
 }
 
+
 /* 
 anchors are inline so you need to make them block to go full width
 */
 .carousel-item a {
     display: block;
     width: 100%;
+}
+
+.border {
+    width: 100%;
+    ;
 }
 
 /* CAROUSEL END */
