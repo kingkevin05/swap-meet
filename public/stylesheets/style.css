@@ -21,10 +21,11 @@ header {
 }
 
 header a {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
     letter-spacing: 4px;
     color: whitesmoke;
+    font-family: var(--orbitron);
 }
 
 a:hover,
@@ -35,6 +36,11 @@ a:focus {
     text-decoration: none;
 }
 
+.col-md-4 .btn {
+    margin: 10px;
+    float: right;
+}
+
 .page-title,
 .section-title {
     font-family: var(--orbitron);
@@ -43,6 +49,7 @@ a:focus {
 }
 
 /* NAVBAR START */
+
 .navbar-toggler {
     margin-left: 35em;
 }
@@ -73,6 +80,7 @@ header .nav-link:hover {
 .sticky {
     position: fixed;
     top: 0;
+    height: 10%;
     width: 100%;
     background: rgba(0, 0, 0, 0.65);
     z-index: 9999;
@@ -87,7 +95,7 @@ header .nav-link:hover {
 Removes white gap between slides - change to base color of slide images
 */
 .carousel {
-    background: #007aeb;
+    background: var(--greengradient);
 }
 
 .carousel-control-next,
@@ -102,6 +110,9 @@ Forces image to be 100% width and not max width of 100%
     width: 100%;
 }
 
+p .card-text {
+    font-family: var(--roboto);
+}
 
 /* 
 anchors are inline so you need to make them block to go full width
