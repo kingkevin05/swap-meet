@@ -30,3 +30,7 @@ textarea {
     margin-right: auto;
     padding: 1em;
 }
+
+.card-img-top {
+    height: 18em;
+}
