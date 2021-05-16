@@ -22,6 +22,32 @@ app.use(session(sess));
 const helpers = require("./utils/helper");
 const hbs = exphbs.create({ helpers });
 
+// var fs = require('fs');
+ 
+// const db = require('./config/connection');
+
+// const Image = db.images;
+  
+// // force: true will drop the table if it already exists
+// db.sequelize.sync({force: true}).then(() => {
+//   	//Give any image name here.
+// 	var imageData = fs.readFileSync(__dirname + '');
+// 	Image.create({
+// 		type: 'file',
+// 		name: 'image',
+// 		data: imageData
+// 	}).then(image => {
+// 		try{
+// 			fs.writeFileSync(__dirname + '', image.data);		
+			
+// 			// exit node.js app
+// 			process.exit(0);
+// 		}catch(e){
+// 			console.log(e);
+// 		}
+// 	})
+// });
+
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 

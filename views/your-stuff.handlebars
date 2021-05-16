@@ -12,7 +12,7 @@
             </div>
 
             <div>
-              <label for="item-description">Description</label>
+              <label for="description">Description</label>
               <input
                 type="text"
                 class="description"
@@ -32,20 +32,20 @@
             </div> --}}
 
             <div>
-              <p><input
+              <input
                   type="file"
                   accept="image/*"
                   name="image"
                   id="file"
                   onchange="loadFile(event)"
                   style="display: none;"
-                /></p>
-              <p><label
+                />
+              <label
                   class="button btn-primary"
                   for="file"
                   style="cursor: pointer;"
-                >Upload Image</label></p>
-              <p><img id="output" width="200" /></p>
+                >Upload Image</label>
+              <img id="output" width="200" />
             </div>
             <button type="submit" class="button btn-primary">Create</button>
           </form>

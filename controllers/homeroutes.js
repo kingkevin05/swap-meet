@@ -20,8 +20,8 @@ router.get('/edit-item', (req, res) => {
   res.render('edit-item')
 });
 
-router.get('/item-imfo', (req, res) => {
-  res.render('item-imfo')
+router.get('/item-info', (req, res) => {
+  res.render('item-info')
 });
 
 module.exports = router;
