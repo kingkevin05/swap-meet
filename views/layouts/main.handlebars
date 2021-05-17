@@ -3,61 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Swap Meet</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="./public/stylesheets/style.css">
-        <link rel="stylesheet" href="./public/stylesheets/secondary-style.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/secondary-style.css" />
   </head>
 
   <body>
     <div class="wrapper">
       <header>
-        <h1>
-          <a href="/">Swap Meet</a>
-        </h1>
-        <div class="row">
-          <nav class="navbar navbar-expand-lg">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <div class="mr-auto"></div>
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  {{#if loggedIn}}
-                    <a href="/your-stuff">Your Stuff</a>
-                    <button id="logout" class="btn-no-style">logout</button>
-                  {{else}}
-                    <a href="/login">login</a>
-                  {{/if}}
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#ABOUT">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#CLOTHING">CLOTHING</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#ELECTRONICS">ELECTRONICS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#ENTERTAINMENT">ENTERTAINMENT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#SPORTING">SPORTING GOODS</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+        <div class="container-fluid p-0">
+          <div class="row text-center">
+            <div class="col-md-4">
 
+            </div>
+            <div class="col-md-4">
+              <a href="/"><h1 class="page-title">Swap Meet</h1></a>
+            </div>
+            <div class="col-md-4">
+              {{#if loggedIn}}
+                <a href="/your-stuff">Your Stuff</a>
+                <label id="logout" class="btn btn-outline-primary">logout</label>
+              {{else}}
+                <a href="/login">login</a>
+              {{/if}}
+            </div>
+          </div>
+          <div class="row">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="/your-stuff"><i
+                  class="fas fa-user"
+                ></i></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-bars text-light"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">HOME
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#ABOUT">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#CLOTHING">CLOTHING</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#ELECTRONICS">ELECTRONICS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#ENTERTAINMENT">ENTERTAINMENT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#SPORTING">SPORTING GOODS</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
       </header>
       <main>
         {{{body}}}
       </main>
       <footer>
-        <h4 class="text-muted">Thanks for visiting!</h4>
-        <p class="pt-4 text-muted">Copyright ©2021 | All rights reserved </p>
+        <div class="container-fluid p-0">
+          <div class="row text-left">
+            <div class="col">
+              <p class="pt-4 text-muted">©2021 Kevin Lawrence, Lawrence Yuen,
+                and Noah Schnur | All rights reserved |
+                <a class="text-muted" href="#">Terms of Use</a>
+                |
+                <a class="text-muted" href="#">Privacy Policy</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 
@@ -65,13 +109,19 @@
       <script src="/javascript/logout.js"></script>
     {{/if}}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/javascript/navbar.js"></script>
   </body>
 
 </html>
