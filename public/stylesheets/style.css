@@ -15,6 +15,10 @@ body {
     background: #92A8D1;
 }
 
+p {
+    font-size: 14pt;
+}
+
 header {
     overflow-x: hidden;
     background: var(--greengradient);

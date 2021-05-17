@@ -65,6 +65,7 @@ router.put("/:id", withAuth, (req, res) => {
   Item.update(
     {
       title: req.body.title,
+      item_description: req.body.item_description,
     },
     {
       where: {
