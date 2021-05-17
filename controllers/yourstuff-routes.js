@@ -53,10 +53,10 @@ router.get("/edit/:id", withAuth, (req, res) => {
   })
     .then(dbItemData => {
       if (dbItemData) {
-        const post = dbItemData.get({ plain: true });
+        const item = dbItemData.get({ plain: true });
 
-        res.render("edit-post", {
-          post,
+        res.render("edit-item", {
+          item,
           loggedIn: true,
         });
       } else {

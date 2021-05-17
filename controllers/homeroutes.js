@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require("../config/connection");
 const { Item, User } = require('../models');
 
-// get all posts for homepage
+// get all items for homepage
 router.get("/", (req, res) => {
   console.log("======================");
   Item.findAll({
@@ -19,8 +19,8 @@ router.get("/", (req, res) => {
       },
     ],
   })
-    .then(dbPostData => {
-      const items = dbPostData.map(item => item.get({ plain: true }));
+    .then(dbItemData => {
+      const items = dbItemData.map(item => item.get({ plain: true }));
 
       res.render("homepage", {
         items,
@@ -35,7 +35,7 @@ router.get("/", (req, res) => {
 
 // get single item
 router.get("/item/:id", (req, res) => {
-  Post.findOne({
+  Item.findOne({
     where: {
       id: req.params.id,
     },
@@ -52,13 +52,13 @@ router.get("/item/:id", (req, res) => {
       },
     ],
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
+    .then(dbItemData => {
+      if (!dbItemData) {
         res.status(404).json({ message: "No items found with this id" });
         return;
       }
 
-      const item = dbPostData.get({ plain: true });
+      const item = dbItemData.get({ plain: true });
 
       res.render("single-item", {
         item,
