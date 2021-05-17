@@ -5,7 +5,7 @@ const withAuth = require("../../utils/auth");
 // get all users
 router.get("/", (req, res) => {
   Item.findAll({
-    attributes: ["id", "title", "image_url"],
+    attributes: ["id", "title", "image_url", "item_description"],
     include: [
       {
         model: User,
@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "image_url", "title"],
+    attributes: ["id", "image_url", "title", "item_description"],
     include: [
       {
         model: User,
@@ -51,7 +51,7 @@ router.post("/", withAuth, (req, res) => {
   Item.create({
     title: req.body.title,
     image_url: req.body.image_url,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
     item_description: req.body.item_description,
   })
     .then(dbItemData => res.json(dbItemData))
@@ -87,7 +87,7 @@ router.put("/:id", withAuth, (req, res) => {
 
 // DELETE item
 router.delete("/:id", withAuth, (req, res) => {
-  User.destroy({
+  Item.destroy({
     where: {
       id: req.params.id,
     },

@@ -5,18 +5,16 @@
   </h2>
   <form class="edit-item-form">
     <div>
+      {{> item-info item}}
       <input name="item-title" type="text" value="{{item.title}}" />
-      <textarea name="description" value="{{item.description}}"></textarea>
-      
+      <textarea name="description" value="{{item.item_description}}"></textarea>
+
     </div>
-    
+
     <button type="submit">Save item</button>
     <button type="button" class="delete-item-btn">Delete item</button>
   </form>
 </article>
-
-
-
 
 <script src="/javascript/edit-item.js"></script>
 <script src="/javascript/delete-item.js"></script>

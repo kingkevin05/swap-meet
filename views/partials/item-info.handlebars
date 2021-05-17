@@ -1,5 +1,8 @@
-<article class="item">
-  <div class="title">
-    <a href="{{image_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url image_url}})</span>
+<div class="card" style="width: 18rem;">
+  <img src="{{image_url}}" width="200" class="card-img-top" alt="..." />
+  <div class="card-body text-center">
+    <a href="/item/{{id}}">{{title}}</a>
+    <span>Posted on ({{format_date created_at}}) by {{user.username}} </span>
+    <p class="card-text"> {{item_description}} </p>
   </div>
+</div>

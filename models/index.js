@@ -2,7 +2,7 @@ const User = require('./User');
 const Item = require('./Item');
 const Categories = require('./Categories');
 
-User.hasMany(Item, {foreignKey: "user_id", onDelete: "CASCADE"});
+User.hasMany(Item, {foreignKey: "user_id"});
 
 Categories.hasMany(Item, {foreignKey: "categories_id"});
 

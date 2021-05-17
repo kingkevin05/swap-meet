@@ -11,13 +11,7 @@ router.get("/", withAuth, (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    attributes: [
-      "id",
-      "image_url",
-      "title",
-      "created_at",
-      
-    ],
+    attributes: ["id", "image_url", "title", "created_at", "item_description"],
     include: [
       {
         model: User,
@@ -37,13 +31,10 @@ router.get("/", withAuth, (req, res) => {
 
 router.get("/edit/:id", withAuth, (req, res) => {
   Item.findByPk(req.params.id, {
-    attributes: [
-      "id",
-      "image_url",
-      "title",
-      "created_at",
-      
-    ],
+    where: {
+      user_id: req.session.user_id,
+    },
+    attributes: ["id", "image_url", "title", "created_at", "item_description"],
     include: [
       {
         model: User,

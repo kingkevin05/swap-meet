@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
       "image_url",
       "title",
       "created_at",
+      "item_description"
     ],
     include: [
       {
@@ -44,6 +45,7 @@ router.get("/item/:id", (req, res) => {
       "image_url",
       "title",
       "created_at",
+      "item_description"
     ],
     include: [
       {
@@ -84,17 +86,13 @@ router.get('/signup', (req, res) => {
   res.render('signup')
 });
 
-router.get('/your-stuff', (req, res) => {
-  res.render('your-stuff')
-});
+// router.get('/edit-item', (req, res) => {
+//   res.render('edit-item')
+// });
 
-router.get('/edit-item', (req, res) => {
-  res.render('edit-item')
-});
-
-router.get('/item-info', (req, res) => {
-  res.render('item-info')
-});
+// router.get('/item-info', (req, res) => {
+//   res.render('item-info')
+// });
 
 
 

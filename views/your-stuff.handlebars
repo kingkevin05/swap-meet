@@ -9,54 +9,22 @@
       <h2 class="section-title">Your Stuff</h2>
     </div>
   </div>
-  <div class="row">
-    <div class="col-4">
-      <div class="card">
-        <img
-          src="https://cdn.pixabay.com/photo/2014/05/02/21/47/laptop-336369_960_720.jpg"
-          class="card-img-top"
-          alt="item-image"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Item title</h5>
-          <p class="card-text">Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <div class="border rounded text-center" id="price">$ 0.00</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <img
-          src="https://cdn.pixabay.com/photo/2016/03/27/19/31/fashion-1283863_960_720.jpg"
-          class="card-img-top"
-          alt="item-image"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Item title</h5>
-          <p class="card-text">Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <div class="border rounded text-center" id="price">$ 0.00</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <img
-          src="https://cdn.pixabay.com/photo/2018/07/06/12/59/tennis-3520370_960_720.jpg"
-          class="card-img-top"
-          alt="item-image"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Item title</h5>
-          <p class="card-text">Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <div class="border rounded text-center" id="price">$ 0.00</div>
-        </div>
-      </div>
+  <div class="row mx-md-n5">
+    <div class="col-4 mx-auto">
+        {{#if items.length}}
+          <ul class="list-group list-group-horizontal-md">
+            {{#each items as |item|}}
+              <li style='list-style-type:none'>
+                {{> item-info item}}
+                <a href="/your-stuff/edit/{{item.id}}" class="mx-auto btn btn-primary btn-lg btn-block">Edit
+                  post</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
     </div>
   </div>
-</div>
+    
 <div class="container-fluid p-0">
   <div class="row">
     <div class="col text-center">
@@ -80,19 +48,19 @@
           </div>
           <div>
             <input
-                type="file"
-                accept="image/*"
-                name="image"
-                id="file"
-                onchange="loadFile(event)"
-                style="display: none;"
-              />
-            
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadFile(event)"
+              style="display: none;"
+            />
+
             <label
-                class="button btn-primary"
-                for="file"
-                style="cursor: pointer;"
-              >Upload Image</label>
+              class="button btn-primary"
+              for="file"
+              style="cursor: pointer;"
+            >Upload Image</label>
             <div><img id="output" width="200" /></div>
           </div>
           <button type="submit" class="button btn-primary">Create</button>
@@ -102,20 +70,6 @@
     </div>
   </div>
 </div>
-
-{{#if items.length}}
-<section>
-  <h2>Your Stuff</h2>
-  <ol>
-    {{#each items as |item|}}
-    <li>
-      {{> item-info item}}
-      <a href="/your-stuff/edit/{{item.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 

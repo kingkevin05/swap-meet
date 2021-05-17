@@ -1,12 +1,1 @@
-<article class="item">
-  <div class="title">
-    <a href="{{item.image_url}}" target="_blank">{{item.title}}</a>
-    <span>({{item.image_url}})</span>
-  </div>
-  <div class="meta">
-    {{item.vote_count}} point(s) by {{user.username}} on
-    {{post.created_at}}
-    |
-    <a href="/item/{{item.id}}">{{post.comments.length}} comment(s)</a>
-  </div>
-</article>
+{{> item-info item }}
