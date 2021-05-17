@@ -12,7 +12,7 @@
 }
 
 body {
-    background: rgba(46, 46, 46, 0.384);
+    background: #92A8D1;
 }
 
 header {
@@ -39,7 +39,15 @@ a:focus {
 .col-md-4 .btn {
     margin: 10px;
     float: right;
+    color: whitesmoke;
+    background-color: #4578d8;
+    border: none;
 }
+
+.col-md-4 .btn:hover {
+    color: black;
+}
+
 
 .page-title,
 .section-title {
@@ -88,6 +96,27 @@ header .nav-link:hover {
 }
 
 /* NAVBAR END */
+
+.section-0 {
+    margin-bottom: 5rem;
+}
+
+.section-0 .card {
+    flex-direction: row;
+    width: 100%;
+    background: #DFCFBE;
+}
+
+.section-0 .card-img {
+    width: 30%;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+    background-color: #8EE4AF;
+}
 
 /* CAROUSEL START */
 
