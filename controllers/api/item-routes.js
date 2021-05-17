@@ -50,7 +50,8 @@ router.post('/', (req, res) => {
     Item.create({
       title: req.body.title,
       image_url: req.body.image_url,
-      user_id: req.body.user_id
+      user_id: req.body.user_id,
+      item_description: req.body.item_description
     })
       .then(dbItemData => res.json(dbItemData))
       .catch(err => {

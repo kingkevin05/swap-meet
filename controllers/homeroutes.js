@@ -1,19 +1,91 @@
 const router = require('express').Router();
+const sequelize = require("../config/connection");
+const { Item, User } = require('../models');
 
-router.get('/', (req, res) => {
-    res.render('homepage')
+// get all posts for homepage
+router.get("/", (req, res) => {
+  console.log("======================");
+  Item.findAll({
+    attributes: [
+      "id",
+      "image_url",
+      "title",
+      "created_at",
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+    .then(dbPostData => {
+      const items = dbPostData.map(item => item.get({ plain: true }));
+
+      res.render("homepage", {
+        items,
+        loggedIn: req.session.loggedIn,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-router.get('/login', (req, res) => {
-  res.render('login')
+// get single item
+router.get("/item/:id", (req, res) => {
+  Post.findOne({
+    where: {
+      id: req.params.id,
+    },
+    attributes: [
+      "id",
+      "image_url",
+      "title",
+      "created_at",
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+    .then(dbPostData => {
+      if (!dbPostData) {
+        res.status(404).json({ message: "No items found with this id" });
+        return;
+      }
+
+      const item = dbPostData.get({ plain: true });
+
+      res.render("single-item", {
+        item,
+        loggedIn: req.session.loggedIn,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("login");
+});
+
+router.get('/signup', (req, res) => {
+  res.render('signup')
 });
 
 router.get('/your-stuff', (req, res) => {
   res.render('your-stuff')
-});
-
-router.get('/single-item', (req, res) => {
-  res.render('single-item')
 });
 
 router.get('/edit-item', (req, res) => {
@@ -23,5 +95,7 @@ router.get('/edit-item', (req, res) => {
 router.get('/item-info', (req, res) => {
   res.render('item-info')
 });
+
+
 
 module.exports = router;

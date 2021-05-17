@@ -11,6 +11,6 @@ Item.belongsTo(User, {foreignKey: "user_id"});
 
 Item.belongsTo(Categories, {foreignKey: "categories_id"});
 
-// Image.belongsTo(Item, {foreignKey: "item_id"})
+// Image.belongsTo(Item, {foreignKey: "user_id"})
 
 module.exports = { User, Item, Categories, Image };

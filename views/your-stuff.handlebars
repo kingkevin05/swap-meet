@@ -1,104 +1,140 @@
-<main>
-  <div class="container-fluid p-0">
-    <div class="row">
-      <div class="col text-center">
-        <section>
-          <h2 class="section-title">Create a New Trade</h2>
+<!-- Your List of Stuff -->
+<style>
+  div.preview-images > img { width: 30%; }
+</style>
 
-          <form class="new-item-form">
-            <div>
-              <label for="item-title">Title</label>
-              <input type="text" id="item-title" name="item-title" />
-            </div>
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col text-center">
+      <h2 class="section-title">Your Stuff</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2014/05/02/21/47/laptop-336369_960_720.jpg"
+          class="card-img-top"
+          alt="item-image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Item title</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <div class="border rounded text-center" id="price">$ 0.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2016/03/27/19/31/fashion-1283863_960_720.jpg"
+          class="card-img-top"
+          alt="item-image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Item title</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <div class="border rounded text-center" id="price">$ 0.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2018/07/06/12/59/tennis-3520370_960_720.jpg"
+          class="card-img-top"
+          alt="item-image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Item title</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <div class="border rounded text-center" id="price">$ 0.00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col text-center">
+      <section class="card">
+        <h2 class="section-title">Create a New Trade</h2>
 
-            <div>
-              <label for="description">Description</label>
-              <input
-                type="text"
-                class="description"
-                id="description"
-                name="description"
+        <form class="new-item-form">
+          <div>
+            <label for="item-title">Title</label>
+            <input type="text" id="item-title" name="item-title" />
+          </div>
+
+          <div>
+            <label for="item-description">Description</label>
+            <textarea
+              class="form-control"
+              name="description"
+              placeholder="Enter a description..."
+              id="description"
+            ></textarea>
+          </div>
+          <div>
+            <input
+                type="file"
+                accept="image/*"
+                name="image"
+                id="file"
+                onchange="loadFile(event)"
+                style="display: none;"
               />
-              {{! <textarea name="description" id="description"></textarea> }}
-            </div>
-            {{!-- <div class="form-floating">
-              <label for="floatingTextarea2">Description</label>
-              <textarea
-                class="form-control"
-                name="description"
-                placeholder="Enter a description..."
-                id="description"
-              ></textarea>
-            </div> --}}
+            
+            <label
+                class="button btn-primary"
+                for="file"
+                style="cursor: pointer;"
+              >Upload Image</label>
+            <div><img id="output" width="200" /></div>
+          </div>
+          <button type="submit" class="button btn-primary">Create</button>
 
-            <div>
-              <input
-                  type="file"
-                  accept="image/*"
-                  name="image"
-                  id="file"
-                  onchange="loadFile(event)"
-                  style="display: none;"
-                />
-              <label
-                  class="button btn-primary"
-                  for="file"
-                  style="cursor: pointer;"
-                >Upload Image</label>
-              <img id="output" width="200" />
+          {{! <div class="container">
+            <div class="row">
+              <div class="col-sm-8 mt-3">
+                <h4>Upload Item Images</h4>
+
+                <form
+                  class="mt-4"
+                  action="/upload"
+                  method="POST"
+                  enctype="multipart/form-data"
+                >
+                  <div class="form-group">
+                    <input
+                      type="file"
+                      name="file"
+                      id="input-files"
+                      class="form-control-file border"
+                    />
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="preview-images"></div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
             </div>
-            <button type="submit" class="button btn-primary">Create</button>
-          </form>
-        </section>
-      </div>
+
+          </div> }}
+        </form>
+      </section>
     </div>
   </div>
-  {{!-- <!-- Your List of Stuff -->
-  <div class="container-fluid p-0">
-    <div class="row">
-      <div class="col text-center">
-        <h2 class="section-title">Your Stuff</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="item-image" />
-          <div class="card-body">
-            <h5 class="card-title">Item title</h5>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="item-image" />
-          <div class="card-body">
-            <h5 class="card-title">Item title</h5>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="item-image" />
-          <div class="card-body">
-            <h5 class="card-title">Item title</h5>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main> --}}
+</div>
 
-{{#if items.length}}
+{{!-- {{#if items.length}}
 <section>
   <h2>Your Stuff</h2>
   <ol>
@@ -110,6 +146,8 @@
     {{/each}}
   </ol>
 </section>
-{{/if}}
+{{/if}} --}}
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <script src="/javascript/add-item.js"></script>
