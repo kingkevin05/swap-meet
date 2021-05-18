@@ -1,17 +1,19 @@
 <article class="text-center">
-  <a href="/your-stuff"> &larr; Back to Your Stuff</a>
+  <a class="button btn-primary" href="/your-stuff"> &larr; Back to Your Stuff</a>
   <h2>
     Edit Item
   </h2>
   <form class="d-flex justify-content-center" id="edit-item-form">
     <div class="d-flex flex-column">
       {{> item-info item}}
-      <input name="item-title" type="text" value="{{item.title}}" />
-      <input name="description" placeholder="edit-description" id="description"></input>
-
-      <button type="submit" class="button btn-primary">Save item</button>
-      <button type="button" class="button btn-primary" id="delete-item-btn">Delete item</button>
-
+      <input name="item-title" type="text" placeholder="{{item.title}}" />
+      <br>
+      <input name="description" placeholder="{{item.item_description}}" id="description"></input>
+      
+      <div class="text-center">
+        <button type="submit" class="button btn-primary">Save item</button>
+        <button type="button" class="button btn-primary" id="delete-item-btn">Delete item</button>
+      </div>
     </div>
 
   </form>

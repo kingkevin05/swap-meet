@@ -6,6 +6,8 @@ textarea {
     resize: none;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
+    
 }
 
 .form-control {
@@ -25,12 +27,13 @@ textarea {
 }
 
 .card {
-    width: 90%;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
 }
 
 .card-img-top {
-    height: 18em;
+    height: auto;
 }
+

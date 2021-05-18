@@ -1,10 +1,13 @@
-<div class="card" style="width: 18rem;">
-  <img src="{{image_url}}" width="200" class="card-img-top" alt="..." />
-  <div class="card-body text-center">
-    <a href="/item/{{id}}"> <h3>{{title}}</h3> </a>
+<div class="card mt-4 mb-5">
+  <img class="card-img-top" src="{{image_url}}" alt="Card image cap" />
+  <div class="card-body">
+    <a href="/item/{{id}}"><h4 class="card-title">{{item.title}}</h4></a>
     <p class="card-text"> {{item_description}} </p>
     <span>Posted on ({{format_date created_at}}) </span>
     <h5>by {{user.username}}</h5>
-    
+    <div class="card-footer text-center">
+      <button class="btn btn-outline-secondary" type="button">Make a offer
+        <i class="fas fa-envelope"></i></button>
+    </div>
   </div>
 </div>
