@@ -1,18 +1,19 @@
-<article>
+<article class="text-center">
   <a href="/your-stuff"> &larr; Back to Your Stuff</a>
   <h2>
     Edit Item
   </h2>
-  <form class="edit-item-form">
-    <div>
+  <form class="d-flex justify-content-center" id="edit-item-form">
+    <div class="d-flex flex-column">
       {{> item-info item}}
       <input name="item-title" type="text" value="{{item.title}}" />
-      <textarea name="description" id="description"></textarea>
+      <input name="description" placeholder="edit-description" id="description"></input>
+
+      <button type="submit" class="button btn-primary">Save item</button>
+      <button type="button" class="button btn-primary" id="delete-item-btn">Delete item</button>
 
     </div>
 
-    <button type="submit">Save item</button>
-    <button type="button" class="delete-item-btn">Delete item</button>
   </form>
 </article>
 
